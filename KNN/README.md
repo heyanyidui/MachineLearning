@@ -1,4 +1,4 @@
-## KNN (K Nearest Neighbors)
+## KNN 分类算法 (K Nearest Neighbors Classifier)
 
 > https://scikit-learn.org/stable/modules/neighbors.html
 
@@ -12,15 +12,47 @@
 
 基于最近邻算法的分类是一种基于距离的机器学习算法，这个算法并没有生成真正的模型，而是简单地存储训练集的距离，然后通过统计待测点最近邻的每个点的类的个数，来决定待测点的分类。
 
-### algorithm 参数
+### 参数
 
-使用 KNeighborsClassifier时可以填写多个参数，比如n_neighbors即KNN算法中的K，具体参考官网教程，这里提到其中一个algorithm。这个参数是用来指定用来计算最近邻点使用的算法，包括以下几种：
+#### n_neighbors (int, *default = 5*)
+
+指定分类时的近邻数目。
+
+#### algorithm 
+
+这个参数是用来指定用来计算最近邻点使用的算法，包括以下几种：
 
 * ball_tree：用于N点问题中的快速归纳。
 * kd_tree：通过树形结构来快速找到该点附近的K个点。
-
 * brute：通过穷举搜索找到邻近点。
 * auto：将会通过fit方法中使用的数据找到最合适的算法。
+
+### 数据原理概述
+
+**从官网的例子说起：**
+
+```python
+samples = [[0., 0., 0.], [0., .5, 0.], [1., 1., .5]]
+from sklearn.neighbors import NearestNeighbors
+neigh = NearestNeighbors(n_neighbors=1)
+neigh.fit(samples)
+
+print(neigh.kneighbors([[1., 1., 1.]]))
+# (array([[0.5]]), array([[2]]))
+```
+
+输出内容 `0.5` 表示距离， 即 `[1,1,1]` 与最近邻 `1,1,0.5` 的闵可夫斯基(*minkowski*)距离，其中的参数`p`取默认值`2`。而 `2` 表示最近邻在 `samples` 中的序号。
+
+**概述**
+
+上面的例子说明的是 “近邻” 的基本概念，而KNN算法则为了让预测结果更加可靠添加的一个可调参数K，选取待测点的K的近邻，再根据这K个近邻所属类别来判断待测类的类别。
+
+所以说KNN算法需要进行大量的运算，从而到K个近邻再来确定类别。
+
+因此可以把KNN分类算法归类为 
+
+* 基于距离的分类算法。
+* 基于实例的分类算法。
 
 ### 优缺点
 
