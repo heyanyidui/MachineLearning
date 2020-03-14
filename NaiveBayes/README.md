@@ -48,6 +48,16 @@ P(x_i \mid y) = \frac{1}{\sqrt{2\pi\sigma^2_y}} \exp\left(-\frac{(x_i - \mu_y)^2
 \mu_y 与 \sigma_y 是极大似然估计的参数
 $$
 
+#### GaussianNB 参数
+
+* **priors: ** **array-like, shape (n_classes)** default None
+
+  即指定先验概率，指定后模型将不会再根据数据计算先验概率。
+
+* **var_smoothing**： ***float***
+
+  指定平滑处理时所有特征出现次数统计量增加数目。
+
 ### 多项式朴素贝叶斯算法(Multinomial Naive Bayes)
 
 该算法假设 ***P(x<sub>i</sub>|y)*** 为多项分布，是文本分类(text classification) 中两个经典的朴素贝叶斯演化算法之一。这个分布是对每一种类型 ***y*** 通过向量
