@@ -4,8 +4,6 @@
 
 ### 数学基础
 
-> 关于
-
 首先从贝叶斯公式说起，假设 x<sub>1</sub>,x<sub>2</sub>,...,x<sub>n</sub> 为输入数据，可以理解为 feature<sub>1</sub> = x<sub>1</sub> , feature<sub>2</sub> = x<sub>2</sub>, ...,feature<sub>n</sub> = x<sub>n</sub>时，求 label = y 的概率，
 $$
 P(A \mid B) = \frac{P(A) P(B \mid A)}
@@ -31,7 +29,7 @@ P(y \mid x_1, \dots, x_n) = \frac{P(y) \prod_{i=1}^{n} P(x_i \mid y)}
 $$
 因为P(x<sub>1</sub>,x<sub>2</sub>,...,x<sub>n</sub>) 是输入的常量，所以
 $$
-\begin{align}\begin{aligned}P(y \mid x_1, \dots, x_n) \propto P(y) \prod_{i=1}^{n} P(x_i \mid y)\\\Downarrow\\\hat{y} = \arg\max_y P(y) \prod_{i=1}^{n} P(x_i \mid y),\end{aligned}\end{align}
+P(y \mid x_1, \dots, x_n) \propto P(y) \prod_{i=1}^{n} P(x_i \mid y)\\\Downarrow\\\hat{y} = \arg\max_y P(y) \prod_{i=1}^{n} P(x_i \mid y)
 $$
 
 我们可以用最大后验概率来评估 ***P(y)*** 和 ***P(x<sub>i</sub>|y)***，其中 ***P(y)*** 与训练集中 ***y*** 类型频率有关。
