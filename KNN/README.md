@@ -56,7 +56,7 @@ print(neigh.kneighbors([[1., 1., 1.]]))
 
 ### 优缺点
 
-> [https://baike.baidu.com/item/%E9%82%BB%E8%BF%91%E7%AE%97%E6%B3%95/1151153?fr=aladdin](https://baike.baidu.com/item/邻近算法/1151153?fr=aladdin)
+> [百度百科](https://baike.baidu.com/item/邻近算法/1151153?fr=aladdin)
 
 * 优点
   * 简单，易于理解，易于实现，无需估计参数，无需训练；
