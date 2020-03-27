@@ -48,7 +48,7 @@ $$
 
 #### GaussianNB 参数
 
-* **priors: ** **array-like, shape (n_classes)** default None
+* **priors**: ***array-like, shape (n_classes)*** default None
 
   即指定先验概率，指定后模型将不会再根据数据计算先验概率。
 
