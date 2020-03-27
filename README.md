@@ -1,4 +1,5 @@
 ## MachineLearningDemos
+[https://github.com/smile-yan/MachineLearning](https://github.com/smile-yan/MachineLearning)
 
 总结一下机器学习的相关笔记，主要包括数据分析，挖掘建模的理论与实例。
 
@@ -8,6 +9,3 @@
 
 
 
-> Smileyan
->
-> 2020.3.27
