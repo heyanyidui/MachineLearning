@@ -8,4 +8,4 @@
   * [朴素贝叶斯](/NaiveBayes/README.md)
   * [随机梯度下降](/StochasticGradientDescent/README.md)
 * **其他**
-  * [markdown 参考](/others/README.md)
+  * [markdown 参考](/others/math.md)
