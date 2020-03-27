@@ -1,11 +1,11 @@
 
 * [**Home**](/)
-* **数据分析那些事儿**
-  * [数据获取](/数据分析那些事儿/数据获取.md)
+* **数据分析**
+  * [数据获取](/DataAnalysis/数据获取.md)
 * **机器学习-经典算法**
   * [KNN](/KNN/README.md)
-  * [Decision Trees](/DecisionTrees/README.md)
-  * [Naive Bayes](/NaiveBayes/README.md)
+  * [决策树](/DecisionTrees/README.md)
+  * [朴素贝叶斯](/NaiveBayes/README.md)
   * [随机梯度下降](/StochasticGradientDescent/README.md)
-* **数学公式**
-  * [markdown 参考](/math/README.md)
+* **其他**
+  * [markdown 参考](/others/README.md)
